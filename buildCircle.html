@@ -7,21 +7,19 @@
 <body>
 <script>
     let Circle = function(radius) {
-
         this.radius = radius;
-
-    };
-    this.getRadius = function() {
-        return radius;
+        this.getRadius = function() {
+            return this.radius;
+        }
+        this.getArea = function() {
+            return Math.PI * radius * radius;
+        }
     }
-    this.getArea = function() {
-        return Math.PI * radius * radius;
-    }
-    let circle = new Circle(2);
+    let circle = new Circle(prompt("Nhập bán kính"));
     let radius = circle.getRadius(); // 2
 
     let area = circle.getArea(); // 12.566370614359172
-    alert("radius: " + radius + "; area: " + area);
+    document.write("radius: " + radius + "<br> area: " + area);
 </script>
 </body>
 </html>
